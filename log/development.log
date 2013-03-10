@@ -1,0 +1,181 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (14.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (92.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (2.8ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateStatuses (20130310211034)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.7ms)[0m  CREATE TABLE "statuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130310211034')[0m
+  [1m[35m (20.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/assets/rails.png" for 127.13.137.1 at 2013-03-10 17:14:06 -0400
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (15ms)
+
+
+Started GET "/rails/info/properties" for 127.13.137.1 at 2013-03-10 17:14:10 -0400
+  [1m[36m (7.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Processing by Rails::InfoController#properties as */*
+  Rendered inline template (93.9ms)
+Completed 200 OK in 110ms (Views: 109.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/properties" for 127.13.137.1 at 2013-03-10 17:14:31 -0400
+Processing by Rails::InfoController#properties as */*
+  Rendered inline template (0.4ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses" for 127.13.137.1 at 2013-03-10 17:14:31 -0400
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (10.0ms)
+Compiled scaffolds.css  (173ms)  (pid 28371)
+Compiled statuses.css  (11ms)  (pid 28371)
+Compiled application.css  (583ms)  (pid 28371)
+Compiled jquery.js  (126ms)  (pid 28371)
+Compiled jquery_ujs.js  (0ms)  (pid 28371)
+Compiled statuses.js  (914ms)  (pid 28371)
+Compiled application.js  (1333ms)  (pid 28371)
+Completed 200 OK in 2864ms (Views: 2601.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.13.137.1 at 2013-03-10 17:14:34 -0400
+Served asset /application.css - 200 OK (14ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.13.137.1 at 2013-03-10 17:14:34 -0400
+Served asset /scaffolds.css - 200 OK (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.13.137.1 at 2013-03-10 17:14:34 -0400
+Served asset /jquery.js - 200 OK (70ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.13.137.1 at 2013-03-10 17:14:35 -0400
+Served asset /statuses.css - 200 OK (3ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.13.137.1 at 2013-03-10 17:14:35 -0400
+Served asset /statuses.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.13.137.1 at 2013-03-10 17:14:35 -0400
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.13.137.1 at 2013-03-10 17:14:35 -0400
+Served asset /application.js - 200 OK (92ms)
+
+
+Started GET "/statuses" for 127.13.137.1 at 2013-03-10 17:14:35 -0400
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.3ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.13.137.1 at 2013-03-10 17:14:35 -0400
+Served asset /application.js - 200 OK (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.13.137.1 at 2013-03-10 17:14:35 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.13.137.1 at 2013-03-10 17:14:35 -0400
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.13.137.1 at 2013-03-10 17:14:35 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/statuses/new" for 127.13.137.1 at 2013-03-10 17:14:40 -0400
+Processing by StatusesController#new as HTML
+  Rendered statuses/_form.html.erb (78.7ms)
+  Rendered statuses/new.html.erb within layouts/application (148.2ms)
+Completed 200 OK in 169ms (Views: 157.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.13.137.1 at 2013-03-10 17:14:40 -0400
+Served asset /statuses.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.13.137.1 at 2013-03-10 17:14:40 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/statuses" for 127.13.137.1 at 2013-03-10 17:15:09 -0400
+Processing by StatusesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UgXSAn8GFWE5tc6Lxr+c7dC9+yOrhNN4qrtS++0Extw=", "status"=>{"name"=>"Michael", "content"=>"Hello!"}, "commit"=>"Create Status"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (96.4ms)[0m  [1mINSERT INTO "statuses" ("content", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Hello!"], ["created_at", Sun, 10 Mar 2013 21:15:09 UTC +00:00], ["name", "Michael"], ["updated_at", Sun, 10 Mar 2013 21:15:09 UTC +00:00]]
+  [1m[35m (16.8ms)[0m  commit transaction
+Redirected to http://project-livec96a6db68f8e.rhcloud.com/statuses/1
+Completed 302 Found in 202ms (ActiveRecord: 113.4ms)
+
+
+Started GET "/statuses/1" for 127.13.137.1 at 2013-03-10 17:15:10 -0400
+Processing by StatusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStatus Load (0.3ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered statuses/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.13.137.1 at 2013-03-10 17:15:10 -0400
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.13.137.1 at 2013-03-10 17:15:10 -0400
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.13.137.1 at 2013-03-10 17:15:10 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/statuses.css?body=1" for 127.13.137.1 at 2013-03-10 17:15:10 -0400
+Served asset /statuses.css - 200 OK (0ms)
+
+
+Started GET "/assets/statuses.js?body=1" for 127.13.137.1 at 2013-03-10 17:15:10 -0400
+Served asset /statuses.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.13.137.1 at 2013-03-10 17:15:10 -0400
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.13.137.1 at 2013-03-10 17:15:10 -0400
+Served asset /application.js - 200 OK (2ms)
+
+
+Started GET "/statuses" for 127.13.137.1 at 2013-03-10 17:15:16 -0400
+Processing by StatusesController#index as HTML
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" 
+  Rendered statuses/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/statuses/1" for 127.13.137.1 at 2013-03-10 17:15:20 -0400
+Processing by StatusesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nISt1tCSBhANEyyQdqd6r6I0ZziOfw+Ce+B6D8Mo3IY=", "id"=>"1"}
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.7ms)[0m  [1mDELETE FROM "statuses" WHERE "statuses"."id" = ?[0m  [["id", 1]]
+  [1m[35m (106.2ms)[0m  commit transaction
+Redirected to https://project-livec96a6db68f8e.rhcloud.com/statuses
+Completed 302 Found in 112ms (ActiveRecord: 108.1ms)
+
+
+Started GET "/statuses" for 127.13.137.1 at 2013-03-10 17:15:20 -0400
+Processing by StatusesController#index as HTML
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" [0m
+  Rendered statuses/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.2ms)
